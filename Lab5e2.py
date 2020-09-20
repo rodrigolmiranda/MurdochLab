@@ -1,6 +1,12 @@
-def isPrime(n, l = []):
-    flag=True
-    if n != 2 and n%2 == 0:
+# %%
+import datetime
+
+ini = datetime.datetime.now()
+
+
+def isPrime(n, l=[]):
+    flag = True
+    if n != 2 and n % 2 == 0:
         return False
 
     if len(l) == 0:
@@ -14,8 +20,8 @@ def isPrime(n, l = []):
                 lint.remove(1)
 
     for i in lint:
-        if n%i==0:
-            flag=False
+        if n % i == 0:
+            flag = False
             break
 
     if flag and n not in lPr:
@@ -23,10 +29,11 @@ def isPrime(n, l = []):
 
     return flag
 
+
 global lPr
 lPr = [1]
 
-N = 1000
+N = 10000
 R = [1]
 
 for i in range(2, N+1, 1):
@@ -34,6 +41,9 @@ for i in range(2, N+1, 1):
     if a and i not in R:
         R.append(i)
 
-print("RRR", R)
-print("lPr", lPr)
+# print("RRR", R)
+# print("lPr", lPr)
 
+print(datetime.datetime.now()-ini)
+
+# %%

@@ -1,6 +1,8 @@
-x = int(input("Type a value for x: "))#43
-y = int(input("Type a value for y: "))#23
-N = int(input("Type a value for N: "))#764
+
+# %%
+x = int(input("Type a value for x: "))  # 43
+y = int(input("Type a value for y: "))  # 23
+N = int(input("Type a value for N: "))  # 764
 r = int((2147483647**0.5)-1)
 print(r)
 
@@ -19,10 +21,10 @@ if abs(N) > r:
 if permit == True:
     result = 1
     for i in range(y):
-        result = (result*x)%N
+        result = (result*x) % N
     print("First way:", result)
 
-    result=1
+    result = 1
     for i in range(y):
-        result = (result%N)*(x%N)
-    print("Second way:", result%N)
+        result = (result % N)*(x % N)
+    print("Second way:", result % N)

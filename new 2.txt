@@ -1,0 +1,22 @@
+dicf = {}
+xori=0
+def fib(x):
+    global xori
+    if xori == 0:
+        xori = x
+        x=0
+
+    if x == 0:
+        dicf[x] = x
+    elif x == 1:
+	    dicf[x] = x
+    else:
+        dicf[x] = dicf[x-1] + dicf[x-2]
+    if x == xori:
+        return dicf[xori]
+    
+    if x != xori:
+	    return fib(x+1)
+
+print("fib: ", fib(100))
+print("dicf: ", dicf)
