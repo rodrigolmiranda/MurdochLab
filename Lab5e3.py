@@ -22,9 +22,11 @@ if permit == True:
     result = 1
     for i in range(y):
         result = (result*x) % N
+        print(i, result)
     print("First way:", result)
 
     result = 1
     for i in range(y):
         result = (result % N)*(x % N)
+        print(i, result)
     print("Second way:", result % N)

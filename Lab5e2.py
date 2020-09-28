@@ -33,7 +33,7 @@ def isPrime(n, l=[]):
 global lPr
 lPr = [1]
 
-N = 10000
+N = 100000
 R = [1]
 
 for i in range(2, N+1, 1):
@@ -41,7 +41,7 @@ for i in range(2, N+1, 1):
     if a and i not in R:
         R.append(i)
 
-# print("RRR", R)
+print("RRR", R)
 # print("lPr", lPr)
 
 print(datetime.datetime.now()-ini)
