@@ -28,6 +28,8 @@ entered by the customer is valid. For example, ticket price and
 the amount entered by the user cannot be negative.
 """
 
+import random
+
 
 class TicketMachine:
     def __init__(self):
@@ -38,7 +40,7 @@ class TicketMachine:
         while(answer != 0):
             try:
                 print(
-                    "Type: \n 1 - Credit money\n 2 - Consult ticket prices\n 3 - Buy ticket\n 4 - Consult balance account")
+                    "                     Type:  1 - Credit money  |  2 - Consult ticket prices  |  3 - Buy ticket  |  4 - Consult balance account")
                 answer = int(input("Choose in the menu what you wish:"))
                 if answer == 0:
                     break
@@ -57,12 +59,12 @@ class TicketMachine:
                 print("Something you typed was invalid! try again!")
 
     def getprice(self):
-        ticket_price = "The ticket prices are: \n"
+        ticket_price = "The ticket prices are:  ("
         for i in self.ticket_price.keys():
             ticket_price = ticket_price + "     " + i + ": " + \
-                str(self.ticket_price[i]) + " \n"
+                str(self.ticket_price[i])
 
-        return ticket_price
+        return ticket_price + "     )"
 
     def insertMoney(self, v):
         if v > 0:
